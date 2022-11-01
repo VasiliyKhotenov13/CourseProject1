@@ -41,24 +41,24 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getTotalSalaryInDepartment();
+        employeeBook.getTotalSalaryInDepartment(2);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getAverageSalaryInDepartment();
+        employeeBook.getAverageSalaryInDepartment(2);
 
         System.out.println("==========================================================================================");
 
 
-        employeeBook.getDepartmentEmployees();
+        employeeBook.getDepartmentEmployees(4);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMinSalaryEmployee(56500f);
+        employeeBook.getMinSalaryEmployee(56500);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMaxSalaryEmployee(75000f);
+        employeeBook.getMaxSalaryEmployee(75000);
 
         System.out.println("==========================================================================================");
 
@@ -66,7 +66,7 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        Employee newEmployee = new Employee("Тест1", 1, 123_123f);
+        Employee newEmployee = new Employee("Тест1", 1, 123123);
         employeeBook.addEmployee(newEmployee);
         employeeBook.getAllEmployee();
 
@@ -77,7 +77,7 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        employeeBook.changeSalary("Михалкова Ольга Петровна", 163000f);
+        employeeBook.changeSalary("Михалкова Ольга Петровна", 163000);
         employeeBook.getAllEmployee();
 
         System.out.println("==========================================================================================");

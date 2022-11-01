@@ -45,8 +45,7 @@ public class EmployeeBook {
         }
     }
 
-    public void getDepartmentEmployees() {
-        int numberDepartment = 4;
+    public void getDepartmentEmployees(int numberDepartment) {
         System.out.println("Отдел №" + numberDepartment);
         for (Employee item : listEmployee) {
             if (item != null) {
@@ -72,8 +71,7 @@ public class EmployeeBook {
         }
     }
 
-    public void getAverageSalaryInDepartment() {
-        int numberDepartment = 2;
+    public void getAverageSalaryInDepartment(int numberDepartment) {
         float totalSalaryInDepartment = 0;
         float averageSalaryInDepartment = 0;
         int counter = 0;
@@ -89,8 +87,7 @@ public class EmployeeBook {
         System.out.println("В отделе №" + numberDepartment + " средняя зарплата работника составляет " + averageSalaryInDepartment + " рублей!");
     }
 
-    public void getTotalSalaryInDepartment() {
-        int numberDepartment = 2;
+    public void getTotalSalaryInDepartment(int numberDepartment) {
         float totalSalaryInDepartment = 0;
         for (Employee item : listEmployee) {
             if (item != null) {

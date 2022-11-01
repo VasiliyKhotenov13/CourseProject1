@@ -54,11 +54,11 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMinSalaryEmployee();
+        employeeBook.getMinSalaryEmployee(56500f);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMaxSalaryEmployee();
+        employeeBook.getMaxSalaryEmployee(75000f);
 
         System.out.println("==========================================================================================");
 

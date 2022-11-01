@@ -24,8 +24,7 @@ public class EmployeeBook {
         return listEmployee;
     }
 
-    public void getMaxSalaryEmployee() {
-        float maxSalaryEmployee = 75_000f;
+    public void getMaxSalaryEmployee(float maxSalaryEmployee) {
         for (Employee item : listEmployee) {
             if (item != null) {
                 if (item.salary >= maxSalaryEmployee) {
@@ -35,8 +34,8 @@ public class EmployeeBook {
         }
     }
 
-    public void getMinSalaryEmployee() {
-        float minSalaryEmployee = 56_500f;
+    public void getMinSalaryEmployee(float minSalaryEmployee) {
+
         for (Employee item : listEmployee) {
             if (item != null) {
                 if (item.salary < minSalaryEmployee) {

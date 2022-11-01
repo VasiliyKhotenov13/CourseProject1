@@ -58,8 +58,7 @@ public class EmployeeBook {
         }
     }
 
-    public void getSalaryIndexingInDepartment() {
-        int salaryIndexingInDepartment = 10;
+    public void getSalaryIndexingInDepartment(int salaryIndexingInDepartment) {
         int numberDepartment = 2;
         System.out.println("Индексация отдела №" + numberDepartment);
         for (Employee item : listEmployee) {
@@ -78,15 +77,15 @@ public class EmployeeBook {
         int numberDepartment = 2;
         float totalSalaryInDepartment = 0;
         float averageSalaryInDepartment = 0;
-        int i = 0;
+        int counter = 0;
         for (Employee item : listEmployee) {
             if (item != null) {
                 if (item.department == numberDepartment) {
                     totalSalaryInDepartment = totalSalaryInDepartment + item.salary;
-                    i++;
+                    counter++;
                 }
             }
-            averageSalaryInDepartment = totalSalaryInDepartment / i;
+            averageSalaryInDepartment = totalSalaryInDepartment / counter;
         }
         System.out.println("В отделе №" + numberDepartment + " средняя зарплата работника составляет " + averageSalaryInDepartment + " рублей!");
     }
@@ -104,8 +103,7 @@ public class EmployeeBook {
         System.out.println("В отделе №" + numberDepartment + " общая сумма зарплат в месяц составляет " + totalSalaryInDepartment + "рублей!");
     }
 
-    public void getMaxSalaryInDepartment() {
-        int numberDepartment = 3;
+    public void getMaxSalaryInDepartment(int numberDepartment) {
         float maxSalaryInDepartment = 0;
         for (Employee item : listEmployee) {
             if (item != null) {
@@ -119,8 +117,7 @@ public class EmployeeBook {
         System.out.println("В отделе №" + numberDepartment + " максимальная зарплата, по всем сотрудникам, составляет: " + maxSalaryInDepartment);
     }
 
-    public void getMinSalaryInDepartment() {
-        int numberDepartment = 3;
+    public void getMinSalaryInDepartment(int numberDepartment) {
         float minSalaryInDepartment = 0;
         for (Employee item : listEmployee) {
             if (item != null) {
@@ -134,8 +131,7 @@ public class EmployeeBook {
         System.out.println("В отделе №" + numberDepartment + " минимальная зарплата, по всем сотрудникам, составляет: " + minSalaryInDepartment);
     }
 
-    public void getSalaryIndexing() {
-        int salaryIndexing = 10;
+    public void getSalaryIndexing(int salaryIndexing) {
         for (Employee item : listEmployee) {
             if (item != null) {
                 item.salary += item.salary / 100 * salaryIndexing;
@@ -145,16 +141,16 @@ public class EmployeeBook {
     }
 
     public void getAverageSalary() {
-        int i = 0;
+        int counter = 0;
         float averageSalary;
         float totalSalary = 0f;
         for (Employee item : listEmployee) {
             if (item != null) {
                 totalSalary = totalSalary + item.salary;
-                i++;
+                counter++;
             }
         }
-        averageSalary = totalSalary / i;
+        averageSalary = totalSalary / counter;
         System.out.println("Средняя зарплата по всем отделам: " + averageSalary);
     }
 

@@ -29,15 +29,15 @@ public class Main {
         System.out.println("==========================================================================================");
         employeeBook.getAllEmployee();
 
-        employeeBook.getSalaryIndexing();
+        employeeBook.getSalaryIndexing(10);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMinSalaryInDepartment();
+        employeeBook.getMinSalaryInDepartment(3);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMaxSalaryInDepartment();
+        employeeBook.getMaxSalaryInDepartment(3);
 
         System.out.println("==========================================================================================");
 
@@ -62,7 +62,7 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getSalaryIndexingInDepartment();
+        employeeBook.getSalaryIndexingInDepartment(10);
 
         System.out.println("==========================================================================================");
 

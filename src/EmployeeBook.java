@@ -8,15 +8,15 @@ public class EmployeeBook {
     private void createEmployeeList() {
 
         listEmployee = new Employee[15];
-        listEmployee[0] = new Employee("Иванов Иван Иванович", 3, 45_513f);
-        listEmployee[1] = new Employee("Петров Пётр Петрович", 5, 39_034f);
-        listEmployee[2] = new Employee("Семёнов Семён Семёнович", 3, 33_021f);
+        listEmployee[0] = new Employee("Иванов Иван Иванович", 2, 32_000f);
+        listEmployee[1] = new Employee("Петров Пётр Петрович", 5, 39_000f);
+        listEmployee[2] = new Employee("Семёнов Семён Семёнович", 2, 33_000f);
         listEmployee[3] = new Employee("Сидоров Игорь Артёмович", 4, 75_000f);
-        listEmployee[4] = new Employee("Смирнов Альберт Генадьевич", 5, 99_199f);
-        listEmployee[5] = new Employee("Распутин Владимир Владимирович", 1, 164_000f);
-        listEmployee[6] = new Employee("Туркин Иван Павлович", 4, 32_432f);
-        listEmployee[7] = new Employee("Буркова Наталья Ивановна", 4, 63_333f);
-        listEmployee[8] = new Employee("Михалкова Ольга Петровна", 2, 130_000f);
+        listEmployee[4] = new Employee("Смирнов Альберт Генадьевич", 5, 99_000f);
+        listEmployee[5] = new Employee("Распутин Владимир Владимирович", 1, 160_000f);
+        listEmployee[6] = new Employee("Туркин Иван Павлович", 3, 55_000f);
+        listEmployee[7] = new Employee("Буркова Наталья Ивановна", 4, 63_000f);
+        listEmployee[8] = new Employee("Михалкова Ольга Петровна", 1, 130_000f);
         listEmployee[9] = new Employee("Рубенштерн Антон Григорьевич", 2, 100_000f);
     }
 
@@ -35,7 +35,6 @@ public class EmployeeBook {
     }
 
     public void getMinSalaryEmployee(float minSalaryEmployee) {
-
         for (Employee item : listEmployee) {
             if (item != null) {
                 if (item.salary < minSalaryEmployee) {
@@ -103,9 +102,7 @@ public class EmployeeBook {
         float maxSalaryInDepartment = 0;
         for (Employee item : listEmployee) {
             if (item != null) {
-                if (item.department == numberDepartment && maxSalaryInDepartment == 0) {
-                    maxSalaryInDepartment = item.salary;
-                } else if (item.department == numberDepartment && maxSalaryInDepartment < item.salary) {
+                if (item.department == numberDepartment && item.salary > maxSalaryInDepartment) {
                     maxSalaryInDepartment = item.salary;
                 }
             }
@@ -114,12 +111,10 @@ public class EmployeeBook {
     }
 
     public void getMinSalaryInDepartment(int numberDepartment) {
-        float minSalaryInDepartment = 0;
+        float minSalaryInDepartment = 999999;
         for (Employee item : listEmployee) {
             if (item != null) {
-                if (item.department == numberDepartment && minSalaryInDepartment < item.salary) {
-                    minSalaryInDepartment = item.salary;
-                } else if (minSalaryInDepartment > item.salary) {
+                if (item.department == numberDepartment && item.salary < minSalaryInDepartment) {
                     minSalaryInDepartment = item.salary;
                 }
             }

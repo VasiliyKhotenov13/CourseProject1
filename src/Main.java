@@ -33,11 +33,11 @@ public class Main {
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMinSalaryInDepartment(3);
+        employeeBook.getMinSalaryInDepartment(2);
 
         System.out.println("==========================================================================================");
 
-        employeeBook.getMaxSalaryInDepartment(3);
+        employeeBook.getMaxSalaryInDepartment(2);
 
         System.out.println("==========================================================================================");
 

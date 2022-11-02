@@ -29,7 +29,7 @@ public class Main {
         System.out.println("==========================================================================================");
         employeeBook.getAllEmployee();
 
-        employeeBook.getSalaryIndexing(10);
+        //employeeBook.getSalaryIndexing(10);
 
         System.out.println("==========================================================================================");
 

@@ -99,28 +99,45 @@ public class EmployeeBook {
     }
 
     public void getMaxSalaryInDepartment(int numberDepartment) {
-        float maxSalaryInDepartment = 0;
-        for (Employee item : listEmployee) {
-            if (item != null) {
-                if (item.department == numberDepartment && item.salary > maxSalaryInDepartment) {
-                    maxSalaryInDepartment = item.salary;
-                }
+        float maxSalary = 0;
+        int item = 0;
+        for (; item < listEmployee.length; item++) {
+            if (listEmployee[item] != null && numberDepartment == listEmployee[item].getDepartment()) {
+                maxSalary = listEmployee[item].getSalary();
+                break;
+            }
+
+        }
+        for (; item < listEmployee.length; item++) {
+            if (listEmployee[item] != null && numberDepartment == listEmployee[item].getDepartment() &&
+                    maxSalary < listEmployee[item].getSalary()) {
+                maxSalary = listEmployee[item].getSalary();
             }
         }
-        System.out.println("В отделе №" + numberDepartment + " максимальная зарплата, по всем сотрудникам, составляет: " + maxSalaryInDepartment);
+        System.out.println("В отделе №" + numberDepartment +
+                " минимальная зарплата, по всем сотрудникам, составляет: " + maxSalary);
     }
 
     public void getMinSalaryInDepartment(int numberDepartment) {
-        float minSalaryInDepartment = 999999;
-        for (Employee item : listEmployee) {
-            if (item != null) {
-                if (item.department == numberDepartment && item.salary < minSalaryInDepartment) {
-                    minSalaryInDepartment = item.salary;
-                }
+        float minSalary = 0;
+        int item = 0;
+        for (; item < listEmployee.length; item++) {
+            if (listEmployee[item] != null && numberDepartment == listEmployee[item].getDepartment()) {
+                minSalary = listEmployee[item].getSalary();
+                break;
+            }
+
+        }
+        for (; item < listEmployee.length; item++) {
+            if (listEmployee[item] != null && numberDepartment == listEmployee[item].getDepartment() &&
+                    minSalary > listEmployee[item].getSalary()) {
+                minSalary = listEmployee[item].getSalary();
             }
         }
-        System.out.println("В отделе №" + numberDepartment + " минимальная зарплата, по всем сотрудникам, составляет: " + minSalaryInDepartment);
+        System.out.println("В отделе №" + numberDepartment +
+                " минимальная зарплата, по всем сотрудникам, составляет: " + minSalary);
     }
+
 
     public void getSalaryIndexing(int salaryIndexing) {
         for (Employee item : listEmployee) {

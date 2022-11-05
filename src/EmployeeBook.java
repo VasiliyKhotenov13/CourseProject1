@@ -115,7 +115,7 @@ public class EmployeeBook {
             }
         }
         System.out.println("В отделе №" + numberDepartment +
-                " минимальная зарплата, по всем сотрудникам, составляет: " + maxSalary);
+                "Максимальная зарплата, по всем сотрудникам, составляет: " + maxSalary);
     }
 
     public void getMinSalaryInDepartment(int numberDepartment) {
@@ -135,7 +135,7 @@ public class EmployeeBook {
             }
         }
         System.out.println("В отделе №" + numberDepartment +
-                " минимальная зарплата, по всем сотрудникам, составляет: " + minSalary);
+                "Минимальная зарплата, по всем сотрудникам, составляет: " + minSalary);
     }
 
 
